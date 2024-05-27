@@ -24,7 +24,7 @@ export default {
       if (!this.file) return;
 
       convertImageToBase64(this.file, function(base64String) {
-        axios.post('your-api-endpoint', {
+        axios.post('https://t57wg2rlb3.execute-api.us-east-1.amazonaws.com/prod/image/upload', {
             image: base64String  
         }, {
             headers: {
