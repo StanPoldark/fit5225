@@ -23,7 +23,7 @@ export default {
     uploadFile() {
       if (!this.file) return;
 
-      convertImageToBase64(file, function(base64String) {
+      convertImageToBase64(this.file, function(base64String) {
         axios.post('your-api-endpoint', {
             image: base64String  
         }, {
