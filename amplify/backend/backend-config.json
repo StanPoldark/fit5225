@@ -1,20 +1,5 @@
 {
-  "api": {
-    "fitapi": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "function",
-          "resourceName": "uploadimage"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
-    }
-  },
+  "api": {},
   "auth": {
     "fit5225cce0d32e": {
       "customAuth": false,

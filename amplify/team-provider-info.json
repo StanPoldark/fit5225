@@ -44,9 +44,6 @@
           "s3Key": "amplify-builds/uploadimage-3730546f69302b785330-build.zip"
         }
       },
-      "api": {
-        "fitapi": {}
-      },
       "storage": {
         "s3Images": {}
       },

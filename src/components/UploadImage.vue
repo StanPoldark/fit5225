@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'UploadImage',
   data() {
@@ -18,8 +20,26 @@ export default {
     onFileChange(e) {
       this.file = e.target.files[0];
     },
-   
-    
+    uploadFile() {
+      if (!this.file) return;
+
+      const formData = new FormData();
+      formData.append('file', this.file); 
+
+      axios.post('https://h3m5xje3uf.execute-api.us-east-1.amazonaws.com/prod/api/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      })
+      .then(response => {
+        console.log('File uploaded successfully:', response.data);
+     
+      })
+      .catch(error => {
+        console.error('Error uploading file:', error);
+       
+      });
+    }
   }
 };
 </script>
