@@ -28,7 +28,7 @@ export default {
       console.log("File added to FormData: ", formData.get('file'));
       axios.post('https://t57wg2rlb3.execute-api.us-east-1.amazonaws.com/prod/api/upload', formData, {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'multipart/form-data'
         }
       })
       .then(response => {
