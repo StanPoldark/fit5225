@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "fit5225867f5ff4_identitypool_867f5ff4",
+    "identityPoolName": "fit5225cce0d32e_identitypool_cce0d32e",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "fit522867f5ff4",
-    "userPoolName": "fit5225867f5ff4_userpool_867f5ff4",
+    "resourceNameTruncated": "fit522cce0d32e",
+    "userPoolName": "fit5225cce0d32e_userpool_cce0d32e",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -33,48 +33,24 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "fit522867f5ff4_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "fit522cce0d32e_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "867f5ff4",
-    "resourceName": "fit5225867f5ff4",
+    "sharedId": "cce0d32e",
+    "resourceName": "fit5225cce0d32e",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "manual",
+    "useDefault": "defaultSocial",
     "hostedUI": true,
     "usernameAttributes": [
       "email"
     ],
     "triggers": {},
-    "hostedUIDomainName": "fit5225867f5ff4-867f5ff4",
+    "hostedUIDomainName": "fit5225cce0d32e-cce0d32e",
     "authProvidersUserPool": [],
     "hostedUIProviderMeta": "[]",
-    "userPoolGroupList": [
-      "fit5225"
-    ],
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d2ewgx8ptv04cq.amplifyapp.com/\"],\"LogoutURLs\":[\"https://main.d2ewgx8ptv04cq.amplifyapp.com/\"]}",
+    "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true,
-    "authRoleArn": {
-      "Fn::GetAtt": [
-        "AuthRole",
-        "Arn"
-      ]
-    },
-    "unauthRoleArn": {
-      "Fn::GetAtt": [
-        "UnauthRole",
-        "Arn"
-      ]
-    },
-    "breakCircularDependency": true,
-    "dependsOn": [],
-    "thirdPartyAuth": true,
-    "authProviders": [],
-    "userPoolGroups": true,
-    "adminQueries": false,
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d2ewgx8ptv04cq.amplifyapp.com/\"],\"LogoutURLs\":[\"https://main.d2ewgx8ptv04cq.amplifyapp.com/\"]}",
-    "parentStack": {
-      "Ref": "AWS::StackId"
-    },
-    "permissions": []
+    "useEnabledMfas": true
   }
 }

@@ -34,9 +34,6 @@
       "AmplifyAppId": "d2q53ndburcu9x"
     },
     "categories": {
-      "auth": {
-        "fit5225867f5ff4": {}
-      },
       "function": {
         "S3Triggercc3728d2": {
           "deploymentBucketName": "amplify-fit5225-main-ac3e8-deployment",
@@ -52,6 +49,15 @@
       },
       "storage": {
         "s3Images": {}
+      },
+      "auth": {
+        "fit5225cce0d32e": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2q53ndburcu9x",
+          "type": "manual"
+        }
       }
     }
   }

@@ -6,7 +6,7 @@ import dashboard from './components/Dashboard.vue';
 
 <template>
   <main>
-    <authenticator>
+    <authenticator  :sign-up-attributes="['given_name', 'family_name']">
       <template v-slot="{ user, signOut }">
         <dashboard />
         <button @click="signOut">Sign Out</button>
