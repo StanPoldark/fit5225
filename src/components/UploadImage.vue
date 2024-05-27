@@ -25,10 +25,10 @@ export default {
 
       const formData = new FormData();
       formData.append('file', this.file); 
-      console.log(formData);
+      console.log("File added to FormData: ", formData.get('file'));
       axios.post('https://t57wg2rlb3.execute-api.us-east-1.amazonaws.com/prod/api/upload', formData, {
         headers: {
-          'Content-Type': 'multipart/form-data'
+          'Content-Type': 'application/json'
         }
       })
       .then(response => {
