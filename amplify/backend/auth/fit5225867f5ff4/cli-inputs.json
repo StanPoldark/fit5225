@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "fit522535cdabc7_identitypool_35cdabc7",
+    "identityPoolName": "fit5225867f5ff4_identitypool_867f5ff4",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "fit52235cdabc7",
-    "userPoolName": "fit522535cdabc7_userpool_35cdabc7",
+    "resourceNameTruncated": "fit522867f5ff4",
+    "userPoolName": "fit5225867f5ff4_userpool_867f5ff4",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -20,7 +20,9 @@
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
-      "email"
+      "email",
+      "family_name",
+      "given_name"
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
@@ -31,20 +33,21 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "fit52235cdabc7_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "fit522867f5ff4_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "35cdabc7",
-    "resourceName": "fit522535cdabc7",
+    "sharedId": "867f5ff4",
+    "resourceName": "fit5225867f5ff4",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "defaultSocial",
     "hostedUI": true,
     "usernameAttributes": [
       "email"
     ],
-    "hostedUIDomainName": "fit5225",
+    "triggers": {},
+    "hostedUIDomainName": "fit5225867f5ff4-867f5ff4",
     "authProvidersUserPool": [],
     "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:5173/dashboard/\"],\"LogoutURLs\":[\"http://localhost:5173/signin/\"]}",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d2ewgx8ptv04cq.amplifyapp.com/\"],\"LogoutURLs\":[\"https://main.d2ewgx8ptv04cq.amplifyapp.com/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,

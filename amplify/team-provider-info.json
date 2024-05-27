@@ -12,11 +12,12 @@
       "AmplifyAppId": "d3o47vok6up855"
     },
     "categories": {
-      "auth": {
-        "fit522535cdabc7": {}
-      },
       "function": {
-        "uploadimage": {}
+        "uploadimage": {},
+        "S3Triggercc3728d2": {}
+      },
+      "auth": {
+        "fit5225867f5ff4": {}
       }
     }
   }
