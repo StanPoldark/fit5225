@@ -23,33 +23,22 @@ export default {
     uploadFile() {
       if (!this.file) return;
 
-      convertImageToBase64(this.file, function(base64String) {
-        axios.post('https://t57wg2rlb3.execute-api.us-east-1.amazonaws.com/prod/image/upload', {
-            image: base64String  
-        }, {
-            headers: {
+      const formData = new FormData();
+      formData.append('file', this.file); 
+      axios.post('https://t57wg2rlb3.execute-api.us-east-1.amazonaws.com/prod/api/upload', formData, {
+        headers: {
                 'Content-Type': 'application/json'
             }
-        })
-        .then(response => {
-            console.log('Upload successful:', response.data);
-        })
-        .catch(error => {
-            console.error('Upload failed:', error);
-        });
-    });
-
+      })
+      .then(response => {
+        console.log('File uploaded successfully:', response.data);
+     
+      })
+      .catch(error => {
+        console.error('Error uploading file:', error);
+       
+      });
     }
   }
 };
-
-function convertImageToBase64(file, callback) {
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        const base64String = e.target.result.split(',')[1];
-        callback(base64String);
-    };
-    reader.readAsDataURL(file);
-}
-
 </script>
