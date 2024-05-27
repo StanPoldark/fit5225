@@ -34,7 +34,7 @@ export default {
 
       // Reference `this.convertImageToBase64` and `this.file` correctly
       this.convertImageToBase64(this.file, (base64String) => {
-        axios.post('https://t57wg2rlb3.execute-api.us-east-1.amazonaws.com/prod/image/upload', {
+        axios.post('https://t57wg2rlb3.execute-api.us-east-1.amazonaws.com/prod/api/upload', {
             image: base64String  // Send the Base64-encoded image data
         }, {
             headers: {
