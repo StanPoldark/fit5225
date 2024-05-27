@@ -43,6 +43,22 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "fit5225867f5ff4"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
     }
   },
   "function": {
@@ -55,6 +71,40 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_S3Triggercc3728d2_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggercc3728d2"
+        }
+      ]
+    },
+    "AMPLIFY_function_S3Triggercc3728d2_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggercc3728d2"
+        }
+      ]
+    },
+    "AMPLIFY_function_uploadimage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uploadimage"
+        }
+      ]
+    },
+    "AMPLIFY_function_uploadimage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "uploadimage"
+        }
+      ]
     }
   },
   "storage": {
