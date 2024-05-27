@@ -26,7 +26,7 @@ export default {
       const formData = new FormData();
       formData.append('file', this.file); 
 
-      axios.post('https://h3m5xje3uf.execute-api.us-east-1.amazonaws.com/prod/api/upload', formData, {
+      axios.post('https://t57wg2rlb3.execute-api.us-east-1.amazonaws.com/prod/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
