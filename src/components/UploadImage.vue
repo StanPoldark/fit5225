@@ -3,6 +3,12 @@
     <h1>Upload Image</h1>
     <input type="file" @change="onFileChange" />
     <button :disabled="!file" @click="uploadFile">Upload</button>
+    <div v-if="labels.length">
+      <h2>Detected Labels:</h2>
+      <ul>
+        <li v-for="label in labels" :key="label.Name">{{ label.Name }} ({{ label.Confidence.toFixed(2) }}%)</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -13,8 +19,12 @@ export default {
   name: 'UploadImage',
   data() {
     return {
-      file: null
+      file: null,
+      labels: []
     };
+  },
+  mounted() {
+    this.listenForSNS();
   },
   methods: {
     onFileChange(e) {
@@ -40,13 +50,21 @@ export default {
           }
         })
         .then(response => {
-          alert('Upload successful:', response.data)
+          alert('Upload successful:', response.data);
           console.log('Upload successful:', response.data);
         })
         .catch(error => {
           console.error('Upload failed:', error.response.data);
         });
       });
+    },
+    listenForSNS() {
+      // Set up a listener for SNS notifications
+      const source = new EventSource('/sns');
+      source.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        this.labels = data.Labels;
+      };
     }
   }
 };
