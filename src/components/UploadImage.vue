@@ -23,9 +23,6 @@ export default {
       labels: []
     };
   },
-  mounted() {
-    this.listenForSNS();
-  },
   methods: {
     onFileChange(e) {
       this.file = e.target.files[0];
@@ -58,14 +55,6 @@ export default {
         });
       });
     },
-    listenForSNS() {
-      // Set up a listener for SNS notifications
-      const source = new EventSource('/sns');
-      source.onmessage = (event) => {
-        const data = JSON.parse(event.data);
-        this.labels = data.Labels;
-      };
-    }
   }
 };
 </script>
