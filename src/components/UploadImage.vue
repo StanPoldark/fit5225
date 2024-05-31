@@ -42,7 +42,7 @@ export default {
       if (!this.file) return;
 
       this.convertImageToBase64(this.file, (base64String) => {
-        axios.post('https://t57wg2rlb3.execute-api.us-east-1.amazonaws.com/prod/api/upload', { 
+        axios.post('https://w0mhdnjcl9.execute-api.us-east-1.amazonaws.com/dev/api/upload', { 
           image: base64String  
         }, {
           headers: {
