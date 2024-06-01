@@ -47,6 +47,7 @@ export default {
           }
         })
         .then(response => {
+          alert('Upload successful')
           console.log('Upload successful:', response.data);
         })
         .catch(error => {
