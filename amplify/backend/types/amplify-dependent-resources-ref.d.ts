@@ -1,6 +1,6 @@
 export type AmplifyDependentResourcesAttributes = {
   "auth": {
-    "fit5225cce0d32e": {
+    "fit5225c2d51aee": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
       "HostedUIDomain": "string",
@@ -13,24 +13,18 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "function": {
-    "S3Triggercc3728d2": {
+    "fit5225c2d51aeeCustomMessage": {
       "Arn": "string",
       "LambdaExecutionRole": "string",
       "LambdaExecutionRoleArn": "string",
       "Name": "string",
       "Region": "string"
     },
-    "uploadimage": {
+    "fit5225c2d51aeePostConfirmation": {
       "Arn": "string",
       "LambdaExecutionRole": "string",
       "LambdaExecutionRoleArn": "string",
       "Name": "string",
-      "Region": "string"
-    }
-  },
-  "storage": {
-    "s3Images": {
-      "BucketName": "string",
       "Region": "string"
     }
   }

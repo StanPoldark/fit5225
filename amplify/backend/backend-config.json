@@ -1,9 +1,28 @@
 {
   "api": {},
   "auth": {
-    "fit5225cce0d32e": {
+    "fit5225c2d51aee": {
       "customAuth": false,
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "fit5225c2d51aeeCustomMessage",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "fit5225c2d51aeePostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
       "frontendAuthConfig": {
         "mfaConfiguration": "OFF",
         "mfaTypes": [
@@ -31,12 +50,12 @@
     }
   },
   "function": {
-    "S3Triggercc3728d2": {
+    "fit5225c2d51aeeCustomMessage": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "uploadimage": {
+    "fit5225c2d51aeePostConfirmation": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -50,35 +69,67 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_S3Triggercc3728d2_deploymentBucketName": {
+    "AMPLIFY_function_fit5225c2d51aeeCustomMessage_EMAILMESSAGE": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "S3Triggercc3728d2"
+          "resourceName": "fit5225c2d51aeeCustomMessage"
         }
       ]
     },
-    "AMPLIFY_function_S3Triggercc3728d2_s3Key": {
+    "AMPLIFY_function_fit5225c2d51aeeCustomMessage_EMAILSUBJECT": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "S3Triggercc3728d2"
+          "resourceName": "fit5225c2d51aeeCustomMessage"
         }
       ]
     },
-    "AMPLIFY_function_uploadimage_deploymentBucketName": {
+    "AMPLIFY_function_fit5225c2d51aeeCustomMessage_REDIRECTURL": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "uploadimage"
+          "resourceName": "fit5225c2d51aeeCustomMessage"
         }
       ]
     },
-    "AMPLIFY_function_uploadimage_s3Key": {
+    "AMPLIFY_function_fit5225c2d51aeeCustomMessage_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "uploadimage"
+          "resourceName": "fit5225c2d51aeeCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_fit5225c2d51aeeCustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fit5225c2d51aeeCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_fit5225c2d51aeePostConfirmation_GROUP": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fit5225c2d51aeePostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_fit5225c2d51aeePostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fit5225c2d51aeePostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_fit5225c2d51aeePostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fit5225c2d51aeePostConfirmation"
         }
       ]
     },
@@ -99,21 +150,5 @@
       ]
     }
   },
-  "storage": {
-    "s3Images": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn",
-            "LambdaExecutionRole"
-          ],
-          "category": "function",
-          "resourceName": "S3Triggercc3728d2"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "S3"
-    }
-  }
+  "storage": {}
 }

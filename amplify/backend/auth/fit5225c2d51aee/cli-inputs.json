@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "fit5225cce0d32e_identitypool_cce0d32e",
+    "identityPoolName": "fit5225c2d51aee_identitypool_c2d51aee",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "fit522cce0d32e",
-    "userPoolName": "fit5225cce0d32e_userpool_cce0d32e",
+    "resourceNameTruncated": "fit522c2d51aee",
+    "userPoolName": "fit5225c2d51aee_userpool_c2d51aee",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -33,23 +33,31 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "fit522cce0d32e_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "fit522c2d51aee_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "cce0d32e",
-    "resourceName": "fit5225cce0d32e",
+    "sharedId": "c2d51aee",
+    "resourceName": "fit5225c2d51aee",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "defaultSocial",
     "hostedUI": true,
     "usernameAttributes": [
       "email"
     ],
-    "triggers": {},
-    "hostedUIDomainName": "fit5225cce0d32e-cce0d32e",
+    "triggers": {
+      "CustomMessage": [
+        "verification-link"
+      ],
+      "PostConfirmation": [
+        "add-to-group"
+      ]
+    },
+    "hostedUIDomainName": "fit5225c2d51aee-c2d51aee",
     "authProvidersUserPool": [],
     "hostedUIProviderMeta": "[]",
     "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d2ewgx8ptv04cq.amplifyapp.com/\"],\"LogoutURLs\":[\"https://main.d2ewgx8ptv04cq.amplifyapp.com/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
+    "verificationBucketName": "fit5225c2d51aeeverificationbucket",
     "usernameCaseSensitive": false,
     "useEnabledMfas": true
   }
